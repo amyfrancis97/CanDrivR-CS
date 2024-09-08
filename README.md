@@ -20,7 +20,9 @@ Welcome to CanDrivR-CS! This repository contains the scripts used for modeling i
 │       ├── config.R
 │       ├── convert_icgc_coords.py # Script for converting ICGC coordinates
 │       ├── get_ICGC.sh            # Shell script for downloading ICGC data
-│       └── get_TCGA.R             # R script for fetching TCGA data
+│       ├── get_TCGA.R             # R script for fetching TCGA data
+│       ├── get_COSMIC.sh          # Shell script for downloading COSMIC data
+│       └── merge_cosmic_class.py  # Python script for merging cancer types onto COSMIC data
 ├── data_processing.py             # Data pre-processing logic
 ├── main.py                        # Main entry point for the pipeline
 ├── model_training.py              # Script for training and evaluating machine learning models
