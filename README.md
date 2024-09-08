@@ -77,10 +77,10 @@ The script will train and evaluate the model on the datasets specified in config
 We welcome contributions to improve the project. To contribute:
 
 Fork the repository.
-Create a new branch for your feature or bugfix.
-Make your changes and commit them.
-Push your changes to your fork.
-Submit a pull request to the main repository.
+* Create a new branch for your feature or bugfix.
+* Make your changes and commit them.
+* Push your changes to your fork.
+* Submit a pull request to the main repository.
 
 ## License
 
@@ -92,7 +92,7 @@ Special thanks to:
 * Tom Gaunt
 * Colin Campbell
 
-**## Funding
+## Funding
 This work was funded by Cancer Research UK [C18281/A30905]. 
 
 ## Contact
