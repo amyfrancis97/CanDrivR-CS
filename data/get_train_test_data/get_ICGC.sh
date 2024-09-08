@@ -42,7 +42,7 @@ awk -F"\t" '($1 != "X" && $1 != "Y")' "$SNV_FILE" > "$AUTOSOME_SNV_FILE"
 # Note: Adjust column index if the annotation format differs.
 echo "Filtering to coding variants..."
 awk -F"|" '{
-    if ($7 ~ /missense_variant|protein_altering_variant|coding_sequence_variant/)
+    if ($7 ~ /missense_variant|protein_altering_variant/)
         print $0
 }' "$AUTOSOME_SNV_FILE" > "$FILTERED_FILE"
 

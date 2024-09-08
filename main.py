@@ -1,8 +1,8 @@
-#%%
+
 from core_modules import load_data, save_data, check_duplicates_between_datasets
 from data_processing import prepare_cancer_specific_datasets, split_dataset_cancer
 from model_training import train_baseline_model, evaluate_model_on_cosmic
-from visualization import *
+from visualisation import *
 from config import *
 from optimisation.selected_features import features
 from collections import Counter
