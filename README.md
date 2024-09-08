@@ -57,8 +57,10 @@ cd CanDrivR-CS
 
 2. Install dependencies: Python dependencies are listed in a requirements.txt file (create one if not yet available):
 
+```bash
 conda env create -f CanDrivR.yml
 conda activate CanDrivR
+```
 
 3. Configure environment: Modify config.py to set up paths, parameters, and environment-specific settings for running the pipeline.
 
