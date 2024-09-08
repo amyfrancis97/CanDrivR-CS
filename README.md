@@ -36,16 +36,12 @@ Welcome to CanDrivR-CS! This repository contains the scripts used for modeling i
 │   ├── optimise_donor_counts.py   # Script for optimising donor counts
 │   ├── params.py                  # Parameters for the pipeline
 │   └── selected_features.py       # Feature selection logic
-├── outputs/                       # Folder containing the output files (e.g., results and plots)
-│   ├── COSMIC_eval_results.tsv    # Results of the COSMIC dataset evaluation
-│   ├── baseline_test_results.tsv  # Baseline model test results
-│   ├── cancer_spec_donor_plots_1.png # Plot showing optimised donor counts for cancers
-│   └── test_heatmap.png           # Heatmap of test results
+│
 ├── plots/                         # Directory for plotting scripts
 │   ├── donor_count_vs_accuracy.py # Script for plotting donor counts vs accuracy
 │   ├── heatmap_feature_importance.py # Script for plotting heatmaps of feature importance
 │   └── plot_dna_shape_position_means.py # DNA shape position plotting logic
-└── visualisation.py               # Core visualisation functions
+└── visualisation.py               # Other core visualisation functions
 
 ```
 ## Setup
