@@ -1,6 +1,18 @@
 #%%
 import sys
-sys.path.append('/Users/uw20204/Documents/scripts/CanDrivR-TS')
+import os
+
+# Check if running in a script or interactive environment
+if '__file__' in globals():
+    # Automatically find the root directory based on the location of this script
+    ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))
+else:
+    # If in an interactive environment, manually set the root directory
+    ROOT_DIR = os.path.abspath(os.path.join(os.getcwd(), '../'))
+
+# Add the root directory to the system path
+sys.path.append(ROOT_DIR)
+
 from sklearn.model_selection import LeaveOneGroupOut
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 from xgboost import XGBClassifier
