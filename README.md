@@ -1,7 +1,7 @@
 # CanDrivR-CS: A Cancer-Specific Machine Learning Framework for Distinguishing Recurrent and Rare Variants
 
 ## Introduction and Overview
-Welcome to CanDrivR-CS! This repository contains the scripts used for modeling in our recent CanDrivR-CD paper [](). The project includes functionality for managing ICGC, COSMIC, and TCGA datasets, applying machine learning models, and visualising the results.
+Welcome to CanDrivR-CS! This repository contains the scripts used for modeling in our recent CanDrivR-CS paper [](). The project includes functionality for managing ICGC, COSMIC, and TCGA datasets, applying machine learning models, and visualising the results.
 
 ## Directory Structure
 ```bash
