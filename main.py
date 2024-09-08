@@ -17,12 +17,16 @@ from plots.plot_dna_shape_position_means import *
 from collections import Counter
 
 def main():
+
     """
     Main function to run the CanDrivR-CS cancer model training, evaluation and visualisation pipeline.
     """
+
     # Step 1: Load datasets
     ICGC = load_data(f"{DATA_DIR}/ICGC.tsv.gz")
-    COSMIC = load_data(f"{DATA_DIR}/COSMIC.tsv.gz")
+    COSMIC_rec = load_data(f"{DATA_DIR}/COSMIC_recurrent.tsv.gz")
+    COSMIC_rare = load_data(f"{DATA_DIR}/COSMIC_rare.tsv.gz")
+    COSMIC = pd.concat([COSMIC_rec, COSMIC_rare]).reset_index(drop = True)
 
     # Step 2: Check to ensure no training variants from ICGC are found in the COSMIC test data.
     print("Checking for duplicate variants between ICGC and COSMIC datasets...")
