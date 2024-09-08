@@ -75,17 +75,10 @@ python main.py
 The script will train and evaluate the model on the datasets specified in config.py and produce output results in the outputs folder. The default output will include evaluation metrics, plots, and results for cancer-specific models.
 
 ## Contributing
-
-We welcome contributions to improve the project. To contribute:
-
-Fork the repository.
-* Create a new branch for your feature or bugfix.
-* Make your changes and commit them.
-* Push your changes to your fork.
-* Submit a pull request to the main repository.
+Contributions are welcome! Follow the guidelines in [CONTRIBUTING.md](https://github.com/amyfrancis97/CanDrivR-CS/blob/main/CONTRIBUTING.md).
 
 ## License
-
+This project is licensed under [LICENSE](https://github.com/amyfrancis97/CanDrivR-CS/blob/main/LICENSE).
 
 ## Acknowledgments
 This work was carried out by Amy Francis in the UK Medical Research Council Integrative Epidemiology Unit (MC\_UU\_00032/03) and using the computational facilities of the Advanced Computing Research Centre, University of Bristol.
