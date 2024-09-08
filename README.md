@@ -91,8 +91,8 @@ Fork the repository.
 This work was carried out by Amy Francis in the UK Medical Research Council Integrative Epidemiology Unit (MC\_UU\_00032/03) and using the computational facilities of the Advanced Computing Research Centre, University of Bristol.
 
 Special thanks to:
-* Tom Gaunt
-* Colin Campbell
+* Tom Gaunt, Bristol Medical School (PHS), University of Bristol
+* Colin Campbell, Intelligent Systems Laboratory, University of Bristol
 
 ## Funding
 This work was funded by Cancer Research UK [C18281/A30905]. 
