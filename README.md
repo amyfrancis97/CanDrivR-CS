@@ -53,7 +53,7 @@ git clone git@github.com:amyfrancis97/CanDrivR-CS.git
 cd CanDrivR-CS
 ```
 
-2. Install dependencies: Python dependencies are listed in a requirements.txt file (create one if not yet available):
+2. Install dependencies:
 
 ```bash
 conda env create -f CanDrivR.yml
