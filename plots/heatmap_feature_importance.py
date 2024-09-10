@@ -12,13 +12,13 @@ def plot_feature_importance_heatmap(df, optimised_metrics_cross_val, cancer_dict
     
     Parameters:
     df (pd.DataFrame): The main dataset.
-    optimised_metrics_cross_val (pd.DataFrame): Optimized cross-validation metrics.
+    optimised_metrics_cross_val (pd.DataFrame): Optimised cross-validation metrics.
     cancer_dict_donor_counts (dict): Dictionary of donor counts for each cancer.
     output_dir (str): Path to save the heatmap.
     features (list): List of features to include in the model.
     
     Returns:
-    pd.DataFrame: Standardized heatmap data for plotting.
+    pd.DataFrame: Standardised heatmap data for plotting.
     """
 
     # Extract feature importances for the top 10 cancers
