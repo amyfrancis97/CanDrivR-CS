@@ -10,7 +10,8 @@ Welcome to CanDrivR-CS! This repository contains the scripts used for modeling i
 ├── config.py                      # Configuration settings for the pipeline
 ├── core_modules.py                # Core utility functions used throughout the pipeline
 ├── data/                          # Folder containing raw and processed data
-│   ├── COSMIC.tsv.gz              # COSMIC dataset (gzipped)
+│   ├── COSMIC_rare.tsv.gz         # COSMIC rare dataset (gzipped)
+│   ├── COSMIC_recurrent.tsv.gz    # COSMIC recurrent dataset (gzipped)
 │   ├── ICGC.tsv.gz                # ICGC dataset (gzipped)
 │   ├── TCGA_SKCM_test.txt.gz      # TCGA SKCM test dataset
 │   ├── TCGA_UCEC_test.txt.gz      # TCGA UCEC test dataset
