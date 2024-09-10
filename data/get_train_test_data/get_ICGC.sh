@@ -15,24 +15,24 @@ echo "This might take some time to run since the ICGC file is very large..."
 cd "$WORKING_DIR"
 
 # Step 1: Download the ICGC VCF file
-#echo "Downloading ICGC data..."
-#wget -O "$ICGC_VCF" "$ICGC_URL"
+echo "Downloading ICGC data..."
+wget -O "$ICGC_VCF" "$ICGC_URL"
 
 # Step 2: Unzip the VCF file
-#echo "Unzipping the downloaded VCF..."
-#gunzip "$ICGC_VCF"
+echo "Unzipping the downloaded VCF..."
+gunzip "$ICGC_VCF"
 
 # Rename the unzipped file to remove query parameters from the filename
-#echo "Renaming the unzipped VCF file..."
-#mv "${ICGC_VCF%.gz}" "simple_somatic_mutation.aggregated.vcf"
+echo "Renaming the unzipped VCF file..."
+mv "${ICGC_VCF%.gz}" "simple_somatic_mutation.aggregated.vcf"
 
 # Step 3: Remove header lines from the VCF and convert it to BED format
-#echo "Converting VCF to BED format (removing VCF headers)..."
-#grep -v "^#" simple_somatic_mutation.aggregated.vcf > "$BED_FILE"
+echo "Converting VCF to BED format (removing VCF headers)..."
+grep -v "^#" simple_somatic_mutation.aggregated.vcf > "$BED_FILE"
 
 # Step 4: Filter to only Single Nucleotide Variants (SNVs)
-#echo "Filtering to SNVs (Single Nucleotide Variants)..."
-#awk -F"\t" '(length($4) == 1 && length($5) == 1)' "$BED_FILE" > "$SNV_FILE"
+echo "Filtering to SNVs (Single Nucleotide Variants)..."
+awk -F"\t" '(length($4) == 1 && length($5) == 1)' "$BED_FILE" > "$SNV_FILE"
 
 # Step 5: Remove variants located on sex chromosomes (X, Y)
 echo "Filtering out sex chromosomes (X and Y)..."
