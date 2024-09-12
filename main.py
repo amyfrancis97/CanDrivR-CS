@@ -25,6 +25,12 @@ def main():
     # Step 1: Load datasets
     print("Loading datasets, this may take a minute...")
     ICGC = load_data(f"{DATA_DIR}/ICGC.tsv.gz")
+    try:
+        ICGC = load_data(f"{DATA_DIR}/ICGC.tsv.gz")
+    except FileNotFoundError:
+        print(f"Error: The dataset 'ICGC.tsv.gz' was not found in the directory '{DATA_DIR}'.")
+        print("Please ensure the directory is correct in 'config.py' and update it to the location where CanDrivR-CS was cloned.")
+
     COSMIC_rec = load_data(f"{DATA_DIR}/COSMIC_recurrent.tsv.gz")
     COSMIC_rare = load_data(f"{DATA_DIR}/COSMIC_rare.tsv.gz")
     COSMIC = pd.concat([COSMIC_rec, COSMIC_rare]).reset_index(drop = True)
@@ -35,9 +41,13 @@ def main():
 
     # Step 3: Train and evaluate baseline pan-cancer model on ICGC
     print("Training baseline pan-cancer model...")
-    final_model, feature_importance = train_baseline_model(ICGC, features, 
-        save_path_test=f"{OUTPUT_DIR}/baseline_test_results.tsv", 
-        save_path_cross_val=f"{OUTPUT_DIR}/baseline_cross_val_results.tsv")
+    try:
+        final_model, feature_importance = train_baseline_model(ICGC, features, 
+            save_path_test=f"{OUTPUT_DIR}/baseline_test_results.tsv", 
+            save_path_cross_val=f"{OUTPUT_DIR}/baseline_cross_val_results.tsv")
+    except FileNotFoundError:
+        print(f"Error: The output directory was not found in '{OUTPUT_DIR}'.")
+        print("Please ensure the directory is correct in 'config.py' and update it to the location where you wish the results to be saved.")
 
     # Step 4: Evaluate the baseline model on the COSMIC dataset
     print("Evaluating baseline model on COSMIC data...")
