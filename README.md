@@ -51,6 +51,9 @@ Welcome to CanDrivR-CS! This repository contains the scripts used for modeling i
 
 ```bash
 git clone git@github.com:amyfrancis97/CanDrivR-CS.git
+or
+git clone https://github.com/amyfrancis97/CanDrivR-CS.git
+
 cd CanDrivR-CS
 ```
 
