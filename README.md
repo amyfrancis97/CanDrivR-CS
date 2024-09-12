@@ -68,6 +68,10 @@ conda activate envname
 
 ## Usage
 1. **Update the config file to contain the paths in which CanDrivR-CS has been installed.**
+   
+```bash
+nano config.py
+```
 
 2. Running the main script:
 
