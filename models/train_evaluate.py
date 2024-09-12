@@ -10,7 +10,9 @@ import pandas as pd
 import numpy as np
 import time
 from sklearn.metrics import balanced_accuracy_score
-
+import warnings
+# Suppress all warnings
+warnings.filterwarnings("ignore")
 def train_and_evaluate_model(classifier, X_train_val, y_train_val, groups_train_val, X_test, y_test):
     """
     Train the model using Leave-One-Group-Out cross-validation and evaluate its performance.
