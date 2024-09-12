@@ -107,7 +107,6 @@ def get_test_cross_val_res(optimised_cancer_results, results_cancer_spec, cancer
     res = res.rename(columns = {"balanced_accuracy": "accuracy"})
     optimised_res = []
     for cancer_name in list(cancer_dict_donor_counts.keys()):
-        print(cancer_name)
         opt_donor_count = cancer_dict_donor_counts[cancer_name]
         result = res[(res["cancer"] == cancer_name) & (res["donor_count"] == opt_donor_count)]
         optimised_res.append(result)
@@ -121,7 +120,6 @@ def get_test_cross_val_res(optimised_cancer_results, results_cancer_spec, cancer
         opt_donor_count = cancer_dict_donor_counts[cancer_name]
         result = res[(res["cancer"] == cancer_name) & (res["donor_count"] == opt_donor_count)]
         optimised_res.append(result)
-        print(f"Optimisation of {cancer_name} completed!")
     optimised_metrics_test = pd.concat(optimised_res).reset_index(drop = True)
     optimised_metrics_cross_val = optimised_metrics_cross_val[optimised_metrics_cross_val["size"] > 100].reset_index(drop = True)
     optimised_metrics_test = optimised_metrics_test[optimised_metrics_test["size"] > 100].reset_index(drop = True)
