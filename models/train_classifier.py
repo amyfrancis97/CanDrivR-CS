@@ -12,7 +12,9 @@ else:
 
 # Add the root directory to the system path
 sys.path.append(ROOT_DIR)
-
+import warnings
+# Suppress all warnings
+warnings.filterwarnings("ignore")
 from sklearn.model_selection import LeaveOneGroupOut
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 from xgboost import XGBClassifier
