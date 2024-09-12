@@ -47,6 +47,16 @@ Welcome to CanDrivR-CS! This repository contains the scripts used for modeling i
 ```
 ## Setup
 
+### **Anaconda Setup:**
+If Anaconda is not already installed on your system, you can download and install Anaconda from the official Anaconda website: https://www.anaconda.com/products/distribution
+
+### **Git Setup:**
+If you haven't already, make sure you have Git installed on your system. You can download and install Git from the official website: https://git-scm.com/
+Check Git is installed by running:
+```bash
+git --version
+```
+
 1. Clone the repository:
 
 ```bash
