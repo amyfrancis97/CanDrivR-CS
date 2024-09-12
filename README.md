@@ -83,10 +83,10 @@ conda activate envname
 nano config.py
 ```
 
-2. Running the main script:
+2. Running the main script. On an average machine, this takes around 25 minutes to run:
 
 ```bash
-python main.py
+python main.py 
 ```
 
 The script will train and evaluate the model on the datasets specified in config.py and produce output results in the outputs folder. The default output will include evaluation metrics, plots, and results for cancer-specific models.
