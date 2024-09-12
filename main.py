@@ -1,4 +1,4 @@
-
+print("Loading modules, this may take a some time...")
 from core_modules import load_data, save_data, check_duplicates_between_datasets
 from data_processing import prepare_cancer_specific_datasets, split_dataset_cancer
 from model_training import train_baseline_model, evaluate_model_on_cosmic
@@ -23,6 +23,7 @@ def main():
     """
 
     # Step 1: Load datasets
+    print("Loading datasets, this may take a minute...")
     ICGC = load_data(f"{DATA_DIR}/ICGC.tsv.gz")
     COSMIC_rec = load_data(f"{DATA_DIR}/COSMIC_recurrent.tsv.gz")
     COSMIC_rare = load_data(f"{DATA_DIR}/COSMIC_rare.tsv.gz")
