@@ -60,7 +60,7 @@ cd CanDrivR-CS
 2. Install dependencies:
 
 ```bash
-conda env create -f CanDrivR.yml
+conda env create --name envname --file=CanDrivR.yml 
 conda activate CanDrivR
 ```
 
