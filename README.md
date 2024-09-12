@@ -61,7 +61,7 @@ cd CanDrivR-CS
 
 ```bash
 conda env create --name envname --file=CanDrivR.yml 
-conda activate CanDrivR
+conda activate envname
 ```
 
 3. Configure environment: Modify config.py to set up paths, parameters, and environment-specific settings for running the pipeline.
