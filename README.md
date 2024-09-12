@@ -67,7 +67,7 @@ conda activate envname
 3. Configure environment: Modify config.py to set up paths, parameters, and environment-specific settings for running the pipeline.
 
 ## Usage
-1. Update the config file to contain the paths in which CanDrivR-CS has been installed.
+1. **Update the config file to contain the paths in which CanDrivR-CS has been installed.**
 
 2. Running the main script:
 
