@@ -12,7 +12,9 @@ else:
 
 # Add the root directory to the system path
 sys.path.append(ROOT_DIR)
-
+import warnings
+# Suppress all warnings
+warnings.filterwarnings("ignore")
 #%%
 import itertools
 import matplotlib.pyplot as plt
