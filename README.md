@@ -67,11 +67,11 @@ git clone https://github.com/amyfrancis97/CanDrivR-CS.git
 cd CanDrivR-CS
 ```
 
-2. Install dependencies:
+2. Install dependencies using conda:
 
 ```bash
-conda env create --name envname --file=CanDrivR.yml 
-conda activate envname
+conda env create --name <envname> --file=CanDrivR.yml 
+conda activate <envname>
 ```
 
 3. Configure environment: Modify config.py to set up paths, parameters, and environment-specific settings for running the pipeline.
