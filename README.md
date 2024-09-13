@@ -7,26 +7,24 @@ Welcome to CanDrivR-CS! This repository contains the scripts used for modeling i
 ```bash
 .
 ├── README.md                      # Project overview and usage instructions
-├── config.py                      # Configuration settings for the pipeline
+├── config.py                      # Configuration settings for the pipeline- **This must be updated for the models to work!**
 ├── core_modules.py                # Core utility functions used throughout the pipeline
 ├── data/                          # Folder containing raw and processed data
 │   ├── COSMIC_rare.tsv.gz         # COSMIC rare dataset (gzipped)
 │   ├── COSMIC_recurrent.tsv.gz    # COSMIC recurrent dataset (gzipped)
-│   ├── ICGC.tsv.gz                # ICGC dataset (gzipped)
+│   ├── ICGC.tsv.gz                # ICGC dataset containing rare & recurrent (gzipped)
 │   ├── TCGA_SKCM_test.txt.gz      # TCGA SKCM test dataset
 │   ├── TCGA_UCEC_test.txt.gz      # TCGA UCEC test dataset
-│   ├── cancer_datasets.pkl        # Cancer-specific dataset pickle file
 │   └── get_train_test_data/       # Scripts for fetching and processing raw data
-│       ├── MANIFEST.txt
-│       ├── config.R
-│       ├── convert_icgc_coords.py # Script for converting ICGC coordinates
+│       ├── config.R               # Configurations for paths used in 'get_TCGA.R'
+│       ├── convert_icgc_coords.py # Script for converting ICGC coordinates from GRCh37-GRCh38 genome builds
 │       ├── get_ICGC.sh            # Shell script for downloading ICGC data
 │       ├── get_TCGA.R             # R script for fetching TCGA data
-│       ├── get_COSMIC.sh          # Shell script for downloading COSMIC data
+│       ├── get_COSMIC.sh          # Shell script for downloading and filtering COSMIC data
 │       └── merge_cosmic_class.py  # Python script for merging cancer types onto COSMIC data
 ├── data_processing.py             # Data pre-processing logic
 ├── main.py                        # Main entry point for the pipeline
-├── model_training.py              # Script for training and evaluating machine learning models
+├── model_training.py              # Modules for training and evaluating machine learning models
 ├── models/                        # Directory containing model-related scripts
 │   ├── metric_results_table.py    # Script for generating result metrics
 │   ├── prepare_training_data.py   # Script for preparing the training data
