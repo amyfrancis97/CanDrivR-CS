@@ -1,4 +1,4 @@
-name: mave-nn-env
+name: CanDrivR-env
 channels:
   - conda-forge
   - defaults
