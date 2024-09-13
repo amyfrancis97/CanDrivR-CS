@@ -67,7 +67,7 @@ git clone https://github.com/amyfrancis97/CanDrivR-CS.git
 cd CanDrivR-CS
 ```
 
-2. Install dependencies using conda (update <envname> to the environment name of your choice e.g., 'CanDrivR-env'):
+2. Install dependencies using conda (update ```bash<envname>``` to the environment name of your choice e.g., 'CanDrivR-env'):
 
 ```bash
 conda env create --name <envname> --file=CanDrivR.yml 
