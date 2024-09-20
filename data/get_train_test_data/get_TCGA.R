@@ -38,7 +38,7 @@ process_maf <- function(dataset, donor_count_threshold, data_dir, output_dir, ge
   # Filter to include only SNPs (single nucleotide polymorphisms)
   data <- data[data$Variant_Type == "SNP", ]
   
-  # Filter to include only missense variants (coding SNPs)
+  # Filter to include only missense variants
   coding_data <- subset(data, One_Consequence == "missense_variant")
   
   # Create a list of chromosome names 1-22
