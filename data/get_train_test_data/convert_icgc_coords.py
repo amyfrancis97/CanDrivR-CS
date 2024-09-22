@@ -55,7 +55,7 @@ def get_icgc_GRCh38(file_path):
     # Extract donor count from the 7th column
     icgc_donor_count["donor_count"] = icgc_donor_count[7].str.split("affected_donors=", expand=True)[1].str.split(";", expand=True)[0]
 
-    # Extract the study ID from the 7th column (e.g., OCCURRENCE=TCGA-BRCA|)
+    # Extract the study ID from the 7th column (e.g., OCCURRENCE=BOCA-UK|)
     studies = icgc_donor_count[7].str.split("OCCURRENCE=", expand=True)[1].str.split("|", expand=True)[0].str.split("-", expand=True)[0]
     icgc_donor_count["studies"] = studies
 
