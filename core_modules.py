@@ -64,4 +64,3 @@ def standardize_data(data):
     return scaler.fit_transform(data)
 
 
-
