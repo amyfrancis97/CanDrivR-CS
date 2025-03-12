@@ -53,7 +53,7 @@ def evaluate_model_on_cosmic(final_model, cosmic_data, shared_features, save_pat
     print("File saved as: ", "baseline_COSMIC_evaluation.tsv")
     test_results.to_csv(save_path, sep = "\t", index = None)
 
-def run_and_test_tcga_model(ICGC, results_file, TCGA_df, study_id, positive_dataset_donor_count, features):
+def run_and_test_tcga_model(ICGC, results_file, TCGA_df, positive_dataset_donor_count, features, study_id = None):
     """ Run the model on ICGC and test on the provided TCGA dataset. """
     # Ensure missing columns are handled before model training
     TCGA_df = add_missing_columns(TCGA_df, features)
