@@ -142,7 +142,4 @@ def main(DATA_DIR, OUTPUT_DIR):
 
 
 if __name__ == "__main__":
-    DATA_DIR="/Users/uw20204/Desktop/CanDrivR-CS/data"
-    OUTPUT_DIR="/Users/uw20204/Desktop"
-
     main(DATA_DIR, OUTPUT_DIR)
