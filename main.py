@@ -19,7 +19,7 @@ from plots.heatmap_feature_importance import *
 from plots.plot_dna_shape_position_means import *
 from collections import Counter
 
-def main():
+def main(DATA_DIR, OUTPUT_DIR):
 
     """
     Main function to run the CanDrivR-CS cancer model training, evaluation and visualisation pipeline.
@@ -91,32 +91,58 @@ def main():
     print("Plotting feature importance heatmap...")
     plot_feature_importance_heatmap(ICGC, optimised_metrics_cross_val, cancer_dict_donor_counts, OUTPUT_DIR, features)
 
-    # Step 12: Test baseline model on TCGA UCEC dataset
+    # Step 12: Test pan-cancer baseline model on TCGA UCEC dataset
     print("Running model on TCGA UCEC dataset...")
-    TCGA_UCEC = load_data("/Volumes/Seagate5TB/data/CanDrivR-data-final/TCGA_UCEC_test.txt.gz")
+    TCGA_UCEC = load_data(f"{DATA_DIR}/TCGA_UCEC_test.txt.gz")
+    UCEC_updated = check_duplicates_between_datasets(ICGC, TCGA_UCEC)
+
+    run_and_test_tcga_model(
+        ICGC=ICGC, 
+        results_file=f"{OUTPUT_DIR}/TCGA_UCEC_results_baseline_pan_cancer.tsv", 
+        TCGA_df=UCEC_updated, 
+        positive_dataset_donor_count=2, 
+        features=features
+    )
+
+    # Step 13: Test pan-cancer baseline model on TCGA SKCM dataset
+    print("Running model on TCGA SKCM dataset...")
+    TCGA_SKCM = load_data(f"{DATA_DIR}/TCGA_SKCM_test.txt.gz")
+    SKCM_updated = check_duplicates_between_datasets(ICGC, TCGA_SKCM)
+    run_and_test_tcga_model(
+        ICGC=ICGC, 
+        results_file=f"{OUTPUT_DIR}/TCGA_SKCM_results_baseline_pan_cancer.tsv", 
+        TCGA_df=SKCM_updated, 
+        positive_dataset_donor_count=2, 
+        features=features
+    )
+
+    # Step 14: Test UCEC cancer-specific model on TCGA UCEC dataset
+    print("Running model on TCGA UCEC dataset...")
+    TCGA_UCEC = load_data(f"{DATA_DIR}/TCGA_UCEC_test.txt.gz")
     UCEC_updated = check_duplicates_between_datasets(ICGC, TCGA_UCEC)
     run_and_test_tcga_model(
         ICGC=ICGC, 
         results_file=f"{OUTPUT_DIR}/TCGA_UCEC_results.tsv", 
         TCGA_df=UCEC_updated, 
-        study_id='UCEC', 
-        positive_dataset_donor_count=3, 
+        positive_dataset_donor_count=2, 
         features=features
     )
 
-    # Step 13: Test baseline model on TCGA SKCM dataset
+   # Step 15: Test SKCM cancer-specific model on TCGA SKCM dataset
     print("Running model on TCGA SKCM dataset...")
-    TCGA_SKCM = load_data("/Volumes/Seagate5TB/data/CanDrivR-data-final/TCGA_SKCM_test.txt.gz")
+    TCGA_SKCM = load_data(f"{DATA_DIR}/TCGA_SKCM_test.txt.gz")
     SKCM_updated = check_duplicates_between_datasets(ICGC, TCGA_SKCM)
     run_and_test_tcga_model(
         ICGC=ICGC, 
         results_file=f"{OUTPUT_DIR}/TCGA_SKCM_results.tsv", 
         TCGA_df=SKCM_updated, 
-        study_id='SKCM', 
         positive_dataset_donor_count=4, 
         features=features
     )
 
 
 if __name__ == "__main__":
-    main()
+    DATA_DIR="/Users/uw20204/Desktop/CanDrivR-CS/data"
+    OUTPUT_DIR="/Users/uw20204/Desktop"
+
+    main(DATA_DIR, OUTPUT_DIR)
